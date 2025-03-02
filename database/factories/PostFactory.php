@@ -19,8 +19,8 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->realText(30), // ランダムなタイトル
-            'content' => $this->faker->realText(200), // ランダムな本文
+            'title' => $this->faker->realText(30, 5), // ランダムなタイトル
+            'content' => $this->faker->realText(200, 5), // ランダムな本文
             'user_id' => User::inRandomOrder()->first()->id ?? 1, // 存在するユーザーIDを取得
         ];
     }
